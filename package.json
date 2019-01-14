@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-standard",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Ember-cli standard support, for checking your application matches your coding standards.",
   "directories": {
     "doc": "doc",
