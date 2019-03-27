@@ -34,7 +34,9 @@ module.exports = {
       return undefined
     }
 
-    return standard(tree, Object.assign({}, this.options, {
+    return standard(tree, {
+      format: this.options.format,
+      group: (this.options.group !== false) ? type : undefined,
       testGenerator: (relativePath, errors, results) => {
         if (!project.generateTestFile) {
           return ''
@@ -61,10 +63,7 @@ module.exports = {
         error (message) {
           ui.writeLine(message, 'ERROR')
         }
-      },
-      ignore (path) {
-        return /^modules\//.test(path)
       }
-    }))
+    })
   }
 }

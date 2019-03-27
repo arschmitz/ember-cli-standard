@@ -52,18 +52,18 @@ describe('ember-cli-Standard', function () {
   it('passes if Standard tests pass', () => {
     return emberTest().then((result) => {
       expect(result.error).to.not.exist
-      expect(result.stdout.match(/[^\r\n]+/g))
-        .to.contain('ok 1 PhantomJS 2.1 - Standard - app.js: should pass Standard')
-        .to.contain('ok 2 PhantomJS 2.1 - Standard - controllers/thing.js: should pass Standard')
-        .to.contain('ok 3 PhantomJS 2.1 - Standard - helpers/destroy-app.js: should pass Standard')
-        .to.contain('ok 4 PhantomJS 2.1 - Standard - helpers/module-for-acceptance.js: should pass Standard')
-        .to.contain('ok 5 PhantomJS 2.1 - Standard - helpers/resolver.js: should pass Standard')
-        .to.contain('ok 6 PhantomJS 2.1 - Standard - helpers/start-app.js: should pass Standard')
-        .to.contain('ok 7 PhantomJS 2.1 - Standard - models/thing.js: should pass Standard')
-        .to.contain('ok 8 PhantomJS 2.1 - Standard - resolver.js: should pass Standard')
-        .to.contain('ok 9 PhantomJS 2.1 - Standard - router.js: should pass Standard')
-        .to.contain('ok 10 PhantomJS 2.1 - Standard - test-helper.js: should pass Standard')
-        .to.not.contain('not ok 11 PhantomJS 2.1 - Standard - unused.js: should pass Standard')
+      expect(result.stdout)
+        .to.match(/ok 1 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - app\.js: should pass Standard/)
+        .to.match(/ok 2 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - controllers\/thing\.js: should pass Standard/)
+        .to.match(/ok 3 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/destroy-app\.js: should pass Standard/)
+        .to.match(/ok 4 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/module-for-acceptance\.js: should pass Standard/)
+        .to.match(/ok 5 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/resolver\.js: should pass Standard/)
+        .to.match(/ok 6 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/start-app\.js: should pass Standard/)
+        .to.match(/ok 7 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - models\/thing\.js: should pass Standard/)
+        .to.match(/ok 8 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - resolver\.js: should pass Standard/)
+        .to.match(/ok 9 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - router\.js: should pass Standard/)
+        .to.match(/ok 11 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - test-helper\.js: should pass Standard/)
+        .to.not.match(/not ok 12 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - unused\.js: should pass Standard/)
     })
   })
 
@@ -71,18 +71,18 @@ describe('ember-cli-Standard', function () {
     fs.outputFileSync(FAILING_FILE, 'let unused = 6;\n')
 
     return emberTest().then((result) => {
-      expect(result.stdout.match(/[^\r\n]+/g))
-        .to.contain('ok 1 PhantomJS 2.1 - Standard - app.js: should pass Standard')
-        .to.contain('ok 2 PhantomJS 2.1 - Standard - controllers/thing.js: should pass Standard')
-        .to.contain('ok 3 PhantomJS 2.1 - Standard - helpers/destroy-app.js: should pass Standard')
-        .to.contain('ok 4 PhantomJS 2.1 - Standard - helpers/module-for-acceptance.js: should pass Standard')
-        .to.contain('ok 5 PhantomJS 2.1 - Standard - helpers/resolver.js: should pass Standard')
-        .to.contain('ok 6 PhantomJS 2.1 - Standard - helpers/start-app.js: should pass Standard')
-        .to.contain('ok 7 PhantomJS 2.1 - Standard - models/thing.js: should pass Standard')
-        .to.contain('ok 8 PhantomJS 2.1 - Standard - resolver.js: should pass Standard')
-        .to.contain('ok 9 PhantomJS 2.1 - Standard - router.js: should pass Standard')
-        .to.contain('ok 10 PhantomJS 2.1 - Standard - test-helper.js: should pass Standard')
-        .to.contain('not ok 11 PhantomJS 2.1 - Standard - unused.js: should pass Standard')
+      expect(result.stdout)
+        .to.match(/ok 1 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - app\.js: should pass Standard/)
+        .to.match(/ok 2 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - controllers\/thing\.js: should pass Standard/)
+        .to.match(/ok 3 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/destroy-app\.js: should pass Standard/)
+        .to.match(/ok 4 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/module-for-acceptance\.js: should pass Standard/)
+        .to.match(/ok 5 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/resolver\.js: should pass Standard/)
+        .to.match(/ok 6 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - helpers\/start-app\.js: should pass Standard/)
+        .to.match(/ok 7 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - models\/thing\.js: should pass Standard/)
+        .to.match(/ok 8 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - resolver\.js: should pass Standard/)
+        .to.match(/ok 9 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - router\.js: should pass Standard/)
+        .to.match(/ok 11 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - test-helper\.js: should pass Standard/)
+        .to.match(/not ok 12 Chrome [0-9]+\.[0-9]+ - \[[0-9]+ ms\] - Standard - unused\.js: should pass Standard/)
     })
   })
 
@@ -104,7 +104,7 @@ describe('ember-cli-Standard', function () {
 
 function emberTest (destroy) {
   return new Promise((resolve) => {
-    exec('node_modules/.bin/ember test', { cwd: __dirname + '/..' }, (error, stdout, stderr) => {
+    exec('node_modules/.bin/ember test', { cwd: path.join(__dirname, '..') }, (error, stdout, stderr) => {
       resolve({
         error,
         stdout,
