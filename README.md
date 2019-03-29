@@ -8,8 +8,8 @@ ember-cli-standard
 
 [npm-badge]: https://img.shields.io/npm/v/ember-cli-standard.svg
 [npm-badge-url]: https://www.npmjs.com/package/ember-cli-standard
-[travis-badge]: https://img.shields.io/travis/ember-cli/ember-cli-standard/master.svg
-[travis-badge-url]: https://travis-ci.org/ember-cli/ember-cli-standard
+[travis-badge]: https://img.shields.io/travis/arschmitz/ember-cli-standard/master.svg
+[travis-badge-url]: https://travis-ci.org/arschmitz/ember-cli-standard
 [ember-observer-badge]: https://emberobserver.com/badges/ember-cli-standard.svg
 [ember-observer-badge-url]: https://emberobserver.com/addons/ember-cli-standard
 
