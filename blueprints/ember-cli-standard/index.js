@@ -1,5 +1,4 @@
 /* eslint-env node */
-
 const unlink = require('fs').unlink
 const resolve = require('path').resolve
 const exec = require('child_process').exec

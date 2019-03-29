@@ -61,7 +61,6 @@
     "broccoli-standard": "^1.1.1",
     "chalk": "^2.4.2",
     "ember-cli-babel": "^7.1.2",
-    "exists-sync": "^0.1.0",
     "fs-extra": "^7.0.1",
     "inflection": "^1.7.1",
     "js-string-escape": "^1.0.0",
