@@ -88,6 +88,12 @@ module.exports = function(defaults) {
 
 </details>
 
+#### Usage with ES Next features
+
+It is possible to use ember-cli-standard with experimental JavaScript (ES Next) features but it will require extra setup.
+
+Instructions can be found at [https://standardjs.com/#how-do-i-use-experimental-javascript-es-next-features](https://standardjs.com/#how-do-i-use-experimental-javascript-es-next-features)
+
 
 Usage
 ------------------------------------------------------------------------------
